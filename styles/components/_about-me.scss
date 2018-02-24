@@ -1,0 +1,18 @@
+.about-me {
+  @include full-width();
+  margin-bottom: $text-margin;
+
+  @include min-width('large') {
+    margin-bottom: 0;
+    padding-right: 60px;
+    width: calc(100% - #{$about-me-width});
+  }
+
+  @include min-width('wrapper-width') {
+    padding-right: 80px;
+  }
+
+  p {
+    font-size: map-get($font-sizes, 'text-small');
+  }
+}

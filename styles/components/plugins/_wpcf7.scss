@@ -1,0 +1,31 @@
+.wpcf7 {
+  display: block;
+  margin: ($text-margin * 2) auto ($text-margin * 3);
+
+  br {
+    display: none;
+  }
+
+  .wpcf7-form-control-wrap {
+    @include full-width();
+    margin-bottom: $text-margin;
+  }
+
+  .wpcf7-not-valid-tip,
+  .wpcf7-validation-errors {
+    border: 0;
+    color: $white;
+    font-family: $text-font;
+    font-size: map-get($font-sizes, 'text-small');
+    margin: 0;
+    padding: 0;
+  }
+
+  .wpcf7-not-valid-tip {
+    margin-top: ($text-margin / 2);
+  }
+
+  .ajax-loader {
+    display: none;
+  }
+}

@@ -1,0 +1,9 @@
+.page-title {
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+
+  &::after {
+    @include title-dash();
+  }
+}

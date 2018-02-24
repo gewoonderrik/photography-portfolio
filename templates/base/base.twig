@@ -1,0 +1,17 @@
+{% include 'header.twig' %}
+
+{% block before_content %}
+{% endblock %}
+
+<main>
+  <div class="wrapper">
+    {% block content %}
+      No results.
+    {% endblock %}
+  </div>
+</main>
+
+{% block after_content %}
+{% endblock %}
+
+{% include 'footer.twig' %}

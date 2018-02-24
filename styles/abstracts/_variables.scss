@@ -1,0 +1,114 @@
+/**
+ * Colors
+ */
+$black: rgba(0, 0, 0);
+$grey-ultra-dark: rgb(21, 21, 21);
+$grey-extra-dark: rgb(51, 51, 51);
+$grey-dark: rgb(102, 102, 102);
+$grey: rgb(153, 153, 153);
+$grey-light: rgb(204, 204, 204);
+$grey-extra-light: rgb(238, 238, 238);
+$white: rgb(255, 255, 255);
+
+$black-transparent: rgba(0, 0, 0, .75);
+$midnight-blue: rgb(24, 24, 29);
+
+$instagram: rgb(235, 0, 56);
+$pinterest: rgb(189, 8, 28);
+$facebook: rgb(75, 108, 178);
+$flickr: rgb(255, 0, 133);
+$magenta: rgb(255, 0, 75);
+
+$primary-color: $magenta;
+
+// Typography
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+$icon-font: (
+  'FontAwesome',
+  sans-serif,
+);
+
+$heading-font: (
+  'Playfair Display',
+  serif,
+);
+
+$text-font: (
+  'Lato',
+  sans-serif,
+);
+
+$font-sizes: (
+  'base': (
+    'small': 1em,
+    'medium': 1.125em,
+  ),
+  'text-small': .875em,
+  'text-very-small': .675em,
+  'huge': 4em,
+  'h1': 1.9em,
+  'h2': 1.5em,
+  'h3': 1.25em,
+  'h4': 1.1em,
+  'blockquote': 1.75em,
+);
+
+$text-margin: 2em;
+
+$line-height: (
+  'base': 1.5em,
+  'large': 2em,
+);
+
+// Dimensions
+
+$content-width: 1020px;
+
+$header-height: (
+  'toggle-navigation': 60px,
+  'full': 80px,
+);
+
+$wrapper: (
+  'padding': (
+    'small': 20px,
+    'medium': 40px,
+  ),
+  'width': 1280px,
+);
+
+$about-me-width: 300px;
+$intro-width: 640px;
+
+// Breakpoints
+
+$breakpoints: (
+  'small': 420px,
+  'medium': 640px,
+  'large': 1024px,
+  'toggle-navigation': 1024px,
+  'wrapper-width': map-get($wrapper, 'width'),
+);
+
+// Transitions
+
+$default-speed: .75s;
+$slow-speed: 2.5s;
+
+$default-transition: ease;
+
+$default-animation: all $default-speed $default-transition;
+$slow-animation: all $slow-speed $default-transition;
+
+// Z-index
+
+$z-index: (
+  'huge': 10000,
+  'big': 1000,
+  'normal': 100,
+  'small': 10,
+  'tiny': 1,
+  'hidden': -1,
+);

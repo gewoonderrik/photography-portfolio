@@ -1,0 +1,12 @@
+blockquote {
+  color: $white;
+  font-family: $heading-font;
+  font-size: map-get($font-sizes, 'blockquote');
+  font-style: italic;
+  margin: 0 0 ($text-margin / 2);
+
+  p {
+    line-height: 1.5em;
+    margin-bottom: 0;
+  }
+}

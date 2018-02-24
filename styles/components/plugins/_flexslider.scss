@@ -1,0 +1,62 @@
+.flexslider {
+  $flexslider: (
+    'max-height': 500px,
+    'nav-size': 30px,
+  );
+
+  @include full-width();
+  @include list-style-none();
+  @include responsive-margin-bottom();
+  position: relative;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-height: map-get($flexslider, 'max-height');
+  }
+
+  .flex-direction-nav {
+    @include full-width();
+    @include list-style-none();
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: map-get($z-index, 'small');
+  }
+
+  .flex-nav-prev,
+  .flex-nav-next {
+    position: absolute;
+  }
+
+  .flex-nav-prev a,
+  .flex-nav-next a {
+    color: $white;
+    cursor: pointer;
+    display: block;
+    font-size: map-get($font-sizes, 'huge');
+    line-height: map-get($flexslider, 'nav-size');
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      font-family: $icon-font;
+    }
+  }
+
+  .flex-nav-prev {
+    left: 0;
+
+    a::after {
+      content: '\f104';
+    }
+  }
+
+  .flex-nav-next {
+    right: 0;
+
+    a::after {
+      content: '\f105';
+    }
+  }
+}

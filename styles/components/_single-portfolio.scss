@@ -1,0 +1,19 @@
+.single-portfolio {
+  &-featured {
+    display: block;
+    margin: 0 auto $text-margin;
+    max-height: 620px;
+  }
+
+  &-intro {
+    @include responsive-margin-bottom();
+    font-style: italic;
+    margin: 0 auto;
+    max-width: $intro-width;
+    width: 100%;
+  }
+
+  &-content {
+    @include full-width();
+  }
+}

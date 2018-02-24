@@ -1,0 +1,67 @@
+@include placeholder();
+
+label {
+  color: $white;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0; // Remove blue glow
+}
+
+[type="email"],
+[type="text"],
+select,
+textarea {
+  appearance: none; // Remove built-in browser/device styling
+  background-color: transparent;
+  border: 2px solid $white;
+  border-radius: 0;
+  color: $white;
+  display: block;
+  font-size: 16px; // Disable iOS zoom on focus
+  height: 3em;
+  padding: 0 15px;
+  transition: $default-animation;
+  width: 100%;
+
+  &:focus {
+    border: 2px solid $white;
+    color: $white;
+  }
+}
+
+[type="button"],
+[type="submit"],
+button {
+  @include button();
+}
+
+select {
+  &[multiple] {
+    height: auto;
+    max-height: 200px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  &:not([multiple]) {
+    background: url('data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==') no-repeat right 10px center;
+  }
+
+  option {
+    padding: 5px 10px;
+  }
+}
+
+textarea {
+  line-height: map-get($line-height, 'base');
+  max-width: 100%; // Android bug
+  min-height: 200px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  resize: vertical;
+}

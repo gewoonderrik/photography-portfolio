@@ -1,0 +1,14 @@
+.video-container {
+  height: 0;
+  margin-bottom: $text-margin;
+  padding-bottom: ((9 / 16) * 100%);
+  position: relative;
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

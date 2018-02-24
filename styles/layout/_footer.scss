@@ -1,0 +1,23 @@
+.footer {
+  @include full-width();
+  color: $grey-dark;
+  font-size: map-get($font-sizes, 'text-very-small');
+  line-height: map-get($line-height, 'base');
+  opacity: 0;
+  padding: 0 0 25px;
+  text-transform: uppercase;
+  transition: $default-animation;
+
+  .body-loaded & {
+    opacity: 1;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .copyright {
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}

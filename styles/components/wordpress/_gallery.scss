@@ -1,0 +1,27 @@
+.gallery {
+  @include full-width();
+  @include responsive-margin-bottom(40px);
+  width: calc(100% + 20px);
+
+  &-item {
+    float: left;
+    margin: 0 20px 20px 0;
+    width: calc(33.333% - 20px);
+
+    @media(min-width: 500px) {
+      width: calc(25% - 20px);
+    }
+
+    @media(min-width: 600px) {
+      width: calc(20% - 20px);
+    }
+
+    @media(min-width: 700px) {
+      width: calc(15% - 20px);
+    }
+
+    img {
+      display: block;
+    }
+  }
+}

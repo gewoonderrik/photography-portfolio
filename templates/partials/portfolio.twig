@@ -1,0 +1,7 @@
+<a href="{{ post.link }}" class="{{ post.class }}">
+  <h2 class="portfolio-title">
+      {{ post.title }}
+  </h2>
+
+  <img class="portfolio-image" alt="{{ post.title }}" src="{{ TimberImage(post.get_field('image')).src|resize(400, 300) }}">
+</a>

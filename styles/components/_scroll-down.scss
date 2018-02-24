@@ -1,0 +1,27 @@
+.scroll-down {
+  $scroll-down-size: 30px;
+
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: fadeInDown;
+  bottom: $scroll-down-size;
+  height: $scroll-down-size;
+  left: 50%;
+  line-height: $scroll-down-size;
+  margin-left: -($scroll-down-size / 2);
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  transition: $slow-animation;
+  width: $scroll-down-size;
+
+  &::after {
+    content: '\f107';
+    font-family: $icon-font;
+    font-size: 30px;
+  }
+
+  .body-loaded & {
+    opacity: 1;
+  }
+}

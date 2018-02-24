@@ -1,0 +1,38 @@
+@mixin placeholder() {
+  $color: tint($grey-dark, 50%);
+  $color-focus: $white;
+
+  // scss-lint:disable PseudoElement
+
+  ::-moz-input-placeholder {
+    color: $color;
+    font-family: $heading-font;
+    font-style: italic;
+  }
+
+  ::-ms-input-placeholder {
+    color: $color;
+    font-family: $heading-font;
+    font-style: italic;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $color;
+    font-family: $heading-font;
+    font-style: italic;
+  }
+
+  :focus::-moz-input-placeholder {
+    color: $color-focus;
+  }
+
+  :focus::-ms-input-placeholder {
+    color: $color-focus;
+  }
+
+  :focus::-webkit-input-placeholder {
+    color: $color-focus;
+  }
+
+  // scss-lint:enable PseudoElement
+}

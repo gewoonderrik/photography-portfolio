@@ -1,0 +1,51 @@
+.portfolio-filter {
+  @include full-width();
+  @include responsive-margin-bottom();
+  font-size: map-get($font-sizes, 'text-very-small');
+
+  @include min-width('medium') {
+    float: right;
+    margin-bottom: 0;
+    margin-top: -75px;
+    width: auto;
+  }
+
+  &-label {
+    float: left;
+    margin-right: 10px;
+    padding: 3px 10px 3px 0;
+    text-transform: lowercase;
+
+    @include min-width('medium') {
+      margin-top: -6px;
+      padding: 3px 10px;
+    }
+  }
+
+  ul {
+    @include list-style-none();
+    float: left;
+  }
+
+  li {
+    display: inline;
+  }
+
+  a {
+    border: 1px solid $white;
+    color: $white;
+    padding: 8px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: $default-animation;
+
+    &.active {
+      background-color: $white;
+      color: $black;
+    }
+  }
+
+  .portfolio-filter-fotografie {
+    border-right: 0;
+  }
+}

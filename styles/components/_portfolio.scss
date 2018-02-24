@@ -1,0 +1,82 @@
+.portfolio {
+  $portfolio: (
+    'max-width': 400px,
+    'spacing': 20px,
+  );
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 3px $black-transparent;
+  float: left;
+  margin: 0 0 map-get($portfolio, 'spacing');
+  max-width: map-get($portfolio, 'max-width');
+  overflow: hidden;
+  position: relative;
+  transition: $default-animation;
+
+  @include min-width('small') {
+    margin-right: map-get($portfolio, 'spacing');
+    max-width: calc(50% - #{map-get($portfolio, 'spacing')});
+  }
+
+  @include min-width('medium') {
+    max-width: calc(33.333% - #{map-get($portfolio, 'spacing')});
+  }
+
+  &-wrap {
+    @include full-width();
+
+    @include min-width('small') {
+      width: calc(100% + (#{map-get($portfolio, 'spacing')});
+    }
+
+    .home & {
+      @include responsive-margin-bottom();
+    }
+  }
+
+  &-title {
+    @include full-width();
+    color: $white;
+    font-size: map-get($font-sizes, 'h4');
+    opacity: 0;
+    padding: 0 map-get($portfolio, 'spacing');
+    position: absolute;
+    text-align: center;
+    top: 60%;
+    transform: translateY(-50%);
+    transition: $default-animation;
+    z-index: map-get($z-index, 'small');
+
+    &:after {
+      @include title-dash(2px, 5px, 0, 0);
+    }
+  }
+
+  &-image {
+    display: block;
+    position: relative;
+    transition: $default-animation;
+    z-index: map-get($z-index, 'hidden');
+
+    img {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    .portfolio-title {
+      opacity: 1;
+      top: 50%;
+
+      &:after {
+        width: 60px;
+      }
+    }
+
+    img {
+      opacity: 0.25;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.socials {
+  @include full-width();
+
+  @include min-width('large') {
+    width: $about-me-width;
+  }
+}

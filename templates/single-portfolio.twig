@@ -1,0 +1,43 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+  <div class="single-portfolio">
+    {% if post.get_field('portfolio_slider') %}
+      <ul class="single-portfolio-images flexslider">
+        {% for slide in post.get_field('portfolio_slider') %}
+          <li class="single-portfolio-image">
+            <img alt="{% if TimberImage(slide.slider_image).alt %}{{ TimberImage(slide.slider_image).alt }}{% else %}{{ post.title }}{% endif %}" src="{{ TimberImage(slide.slider_image).src|resize(801) }}">
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <img class="single-portfolio-featured" alt="{{ post.title }}" src="{{ TimberImage(post.get_field('image')).src|resize(941) }}" srcset="{{ TimberImage(post.get_field('image')).src|resize(1881) }} 2x">
+    {% endif %}
+
+    <h1 class="page-title">
+      {{ post.title }}
+    </h1>
+
+    {% if post.get_field('portfolio_intro') %}
+      <div class="single-portfolio-intro">
+        {{ post.get_field('portfolio_intro') }}
+      </div>
+    {% endif %}
+  
+    {% if post.get_field('portfolio_content') %}
+      <div class="single-portfolio-content">
+        {{ post.get_field('portfolio_content') }}
+      </div>
+    {% endif %}
+    
+    <div class="portfolio-detail-nav">
+        <a href="{{ post.prev.permalink }}" class="portfolio-detail-nav-prev">
+          <span>{{ post.prev.post_title }}</span>
+        </a>
+
+        <a href="{{ post.next.permalink }}" class="portfolio-detail-nav-next">
+          <span>{{ post.next.post_title }}</span>
+        </a>
+    </div>
+  </div>
+{% endblock %}

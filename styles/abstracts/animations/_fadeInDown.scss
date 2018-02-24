@@ -1,0 +1,16 @@
+@keyframes fadeInDown {
+  0% {
+    opacity: 1;
+    transform: scale(1.25) translateY(-25px);
+  }
+
+  50% {
+    opacity: .5;
+    transform: scale(1) translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.25) translateY(-25px);
+  }
+}

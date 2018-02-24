@@ -1,0 +1,40 @@
+h1,
+h2,
+h3,
+h4 {
+  color: $white;
+  font-family: $heading-font;
+  font-weight: 600;
+  line-height: map-get($line-height, 'base');
+  margin: 0 0 1em;
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+h1 {
+  font-size: map-get($font-sizes, 'h1');
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: map-get($font-sizes, 'h2');
+}
+
+h3 {
+  font-size: map-get($font-sizes, 'h3');
+}
+
+h4,
+h5,
+h6 {
+  font-size: map-get($font-sizes, 'h4');
+}

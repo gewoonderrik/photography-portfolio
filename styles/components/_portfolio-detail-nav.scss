@@ -1,0 +1,46 @@
+.portfolio-detail-nav {
+  @include full-width();
+
+  &-prev,
+  &-next {
+    font-size: map-get($font-sizes, 'text-very-small');
+    font-weight: 700;
+    opacity: .5;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::before,
+    &::after {
+      display: inline-block;
+      font-family: $icon-font;
+    }
+
+    span {
+      display: none;
+
+      @include min-width('medium') {
+        display: inline;
+      }
+    }
+  }
+
+  &-prev {
+    float: left;
+
+    &::before {
+      content: '\f104';
+    }
+  }
+
+  &-next {
+    float: right;
+
+    &::after {
+      content: '\f105';
+    }
+  }
+}

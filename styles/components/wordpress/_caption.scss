@@ -1,0 +1,18 @@
+.wp-caption {
+  max-width: 100%;
+}
+
+.wp-caption-dd,
+.wp-caption-text {
+  font-family: $heading-font;
+  font-size: map-get($font-sizes, 'text-small');
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 0 0;
+  width: 100%;
+
+  .gallery & {
+  	display: none;
+  }
+}

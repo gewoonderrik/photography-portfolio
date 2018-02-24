@@ -1,0 +1,14 @@
+body {
+  $base: map-get($font-sizes, 'base');
+
+  background-color: $grey-ultra-dark;
+  color: $grey-light;
+  font-family: $text-font;
+  font-size: map-get($base, 'small');
+  line-height: map-get($line-height, 'base');
+  word-wrap: break-word;
+
+  @include min-width('medium') {
+    font-size: map-get($base, 'medium');
+  }
+}

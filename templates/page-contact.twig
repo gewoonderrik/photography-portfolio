@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+  <h1 class="page-title">
+    {{ post.title }}
+  </h1>
+ 
+  {{ post.content }}
+  
+  <div class="contact-socials">
+  <h2>
+  	Or follow me on
+  </h2>
+  {% include 'partials/socials-list.twig' %}
+{% endblock %}

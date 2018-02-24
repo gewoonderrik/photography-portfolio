@@ -1,0 +1,42 @@
+{% extends 'base.twig' %}
+
+{% block before_content %}
+	{% include 'partials/hero.twig' %}
+{% endblock %}
+
+{% block content %}
+	<h2 class="portfolio-wrapper-title">
+		{% if post.get_field('featured_work_title') %}
+			{{ post.get_field('featured_work_title') }}
+		{% else %}
+			Featured work
+		{% endif %}
+	</h2>
+
+	<div class="portfolio-wrap">
+		{% for post in post.get_field('featured_work') %}
+			{% include 'partials/portfolio.twig' %}
+		{% endfor %}
+	</div>
+
+	<div class="about-me">
+		<h3>
+			{% if post.get_field('about_me_title') %}
+				{{ post.get_field('about_me_title') }}
+			{% else %}
+				About me
+			{% endif %}
+		</h3>
+
+		{{ post.get_field('about_me_text') }}
+	</div>
+
+	<div class="socials">
+		<h3>
+			Volg mij op
+		</h3>
+		
+		{% include 'partials/socials-list.twig' %}
+	</div>
+{% endblock %}
+

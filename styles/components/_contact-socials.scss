@@ -1,0 +1,13 @@
+.contact-socials {
+  @include full-width();
+  text-align: center;
+
+  h2 {
+    @include full-width();
+    text-align: inherit;
+  }
+
+  ul {
+    display: inline-block;
+  }
+}

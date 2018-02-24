@@ -1,0 +1,51 @@
+.hero {
+  @include full-width();
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  top: -(map-get($header-height, 'toggle-navigation'));
+  transition: $default-animation;
+  width: 100vw;
+
+  @include min-width('toggle-navigation') {
+    top: 0;
+  }
+
+  .body-loaded & {
+    opacity: 1;
+  }
+
+  &-inner {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  &-name,
+  &-tagline {
+    color: $white;
+    opacity: 0;
+    transition: $slow-animation;
+
+    .body-loaded & {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &-name {
+    transform: translateX(-400px);
+  }
+
+  &-tagline {
+    font-style: italic;
+    font-weight: 400;
+    transform: translateX(400px);
+  }
+}
