@@ -1,6 +1,10 @@
 {% extends 'base.twig' %}
 
 {% block content %}
+  {% if post.get_field('image') %}
+    <img class="single-portfolio-featured" alt="{{ post.title }}" src="{{ TimberImage(post.get_field('image')).src|resize(941) }}" srcset="{{ TimberImage(post.get_field('image')).src|resize(1881) }} 2x">
+  {% endif %}
+ 
   <h1 class="page-title">
     {{ post.title }}
   </h1>
