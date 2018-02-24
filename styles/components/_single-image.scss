@@ -1,0 +1,10 @@
+.single-image {
+  display: block;
+  position: relative;
+  transition: $default-animation;
+  z-index: map-get($z-index, 'hidden');
+
+  img {
+    opacity: 1;
+  }
+}
