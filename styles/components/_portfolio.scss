@@ -54,6 +54,10 @@
     }
   }
 
+  img {
+    display: block;
+  }
+
   &:hover {
     .portfolio-title {
       opacity: 1;
