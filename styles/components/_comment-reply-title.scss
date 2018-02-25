@@ -1,0 +1,15 @@
+.comment-reply-title {
+  @include full-width();
+
+  small {
+    font-family: $text-font;
+    font-size: map-get($font-sizes, 'text-very-small');
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include min-width('large') {
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.comment-respond {
+  $label-width: 120px;
+
+  @include full-width();
+  margin-bottom: $text-margin;
+
+  @include min-width('large') {
+    label {
+      float: left;
+      padding: 4px 0;
+      width: $label-width;
+    }
+
+    textarea,
+    [type="text"],
+    [type="email"] {
+      width: calc(100% - #{$label-width});
+    }
+
+    [type="submit"] {
+      float: left;
+      margin-left: $label-width;
+    }
+  }
+}

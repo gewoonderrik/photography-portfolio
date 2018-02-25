@@ -1,15 +1,18 @@
 <div class="comment">
-  <p class="comment-meta">Posted on {{ comment.date }} by {{ comment.author.name }}</p>
-  <p class="comment-content">{{ comment.comment_content|wpautop }}</p>
+  <p class="comment-meta">{{ comment.author.name }} &middot {{ comment.date }}</p>
+
+  <div class="comment-content">
+    {{ comment.comment_content|wpautop }}
+  </div>
 
   {{ comment.reply_link('Respond') }}
 
   {% if comment.children %}
-    <h3>
-      Replies
-    </h3>
-
     <div class="comment-children">
+      <h4>
+        Replies
+      </h4>
+
       {% for comment in comment.children %}
         {% include "partials/comment.twig" %}
       {% endfor %}

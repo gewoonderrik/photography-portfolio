@@ -5,18 +5,18 @@
     <img class="single-portfolio-featured" alt="{{ post.title }}" src="{{ TimberImage(post.get_field('image')).src|resize(941) }}" srcset="{{ TimberImage(post.get_field('image')).src|resize(1881) }} 2x">
   {% endif %}
 
-  {% include 'partials/meta.twig' %}
- 
   <h1 class="page-title">
     {{ post.title }}
   </h1>
 
+  {% include 'partials/meta.twig' %}
+
   {{ post.content }}
   
   {% if post.comments %}
-    <h2>
+    <h3>
       Comments
-    </h2>
+    </h3>
 
     <div class="comment-wrap">
       {% for comment in post.comments %}
@@ -25,13 +25,9 @@
     </div>
   {% endif %}
 
-    {% if post.comment_status == "closed" %}
-      <p><em>Comments for this post are closed</em></p>
-    {% else %}
-      {{ function('comment_form') }}
-    {% endif %}
-
-  <div class="comment-form">
+  {% if post.comment_status == "closed" %}
+    <p><em>Comments for this post are closed</em></p>
+  {% else %}
     {{ function('comment_form') }}
-  </div>
+  {% endif %}
 {% endblock %}
