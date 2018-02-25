@@ -12,4 +12,26 @@
   </h1>
 
   {{ post.content }}
+  
+  {% if post.comments %}
+    <h2>
+      Comments
+    </h2>
+
+    <div class="comment-wrap">
+      {% for comment in post.comments %}
+        {% include 'partials/comment.twig' %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+    {% if post.comment_status == "closed" %}
+      <p><em>Comments for this post are closed</em></p>
+    {% else %}
+      {{ function('comment_form') }}
+    {% endif %}
+
+  <div class="comment-form">
+    {{ function('comment_form') }}
+  </div>
 {% endblock %}

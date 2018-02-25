@@ -1,0 +1,18 @@
+<div class="comment">
+  <p class="comment-meta">Posted on {{ comment.date }} by {{ comment.author.name }}</p>
+  <p class="comment-content">{{ comment.comment_content|wpautop }}</p>
+
+  {{ comment.reply_link('Respond') }}
+
+  {% if comment.children %}
+    <h3>
+      Replies
+    </h3>
+
+    <div class="comment-children">
+      {% for comment in comment.children %}
+        {% include "partials/comment.twig" %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
