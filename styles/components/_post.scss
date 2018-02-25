@@ -7,6 +7,7 @@
   @include flex-grid-item();
   background-color: $black;
   min-height: map-get($post, 'height');
+  text-align: center;
 
   &-wrap {
     @include flex-grid-wrapper();
@@ -35,5 +36,6 @@
   &-more-link {
     display: block;
     margin-bottom: (map-get($post, 'spacing') * 1.5);
+    padding: 0 map-get($post, 'spacing');
   }
 }
