@@ -4,7 +4,7 @@ $context['posts'] = Timber::get_posts();
 $post_type = get_post_type(get_the_ID());
 
 if (is_archive()) {
-    $context['title'] = $post_type;
+    $context['title'] = get_the_archive_title();
 } else {
     $context['title'] = get_the_title(get_option('page_for_posts'));
 }
