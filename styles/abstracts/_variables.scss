@@ -9,15 +9,11 @@ $grey-extra-light: rgb(238, 238, 238);
 $white: rgb(255, 255, 255);
 
 $black-transparent: rgba(0, 0, 0, .75);
-$midnight-blue: rgb(24, 24, 29);
 
 $instagram: rgb(235, 0, 56);
 $pinterest: rgb(189, 8, 28);
 $facebook: rgb(75, 108, 178);
 $flickr: rgb(255, 0, 133);
-$magenta: rgb(255, 0, 75);
-
-$primary-color: $magenta;
 
 // Typography
 
@@ -81,6 +77,7 @@ $wrapper: (
 
 $about-me-width: 300px;
 $intro-width: 640px;
+$single-width: 720px;
 
 // Breakpoints
 
