@@ -3,10 +3,9 @@
   flex-flow: row wrap;
   float: left;
   justify-content: flex-start;
-  text-align: center;
   width: 100%;
 
-  @include respond-to('mobile-large') {
+  @include min-width('small') {
     margin-bottom: -($flex-grid-spacing);
     margin-left: -($flex-grid-spacing / 2);
     width: calc(100% + #{$flex-grid-spacing});

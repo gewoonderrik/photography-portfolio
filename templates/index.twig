@@ -2,13 +2,13 @@
 
 {% block content %}
   <h1>
-    {{ title }}
+    Blog
   </h1>
 
   {% if posts is not empty %}
-    <div class="portfolio-wrap">
+    <div class="post-wrap">
       {% for post in posts %}
-        {% include 'partials/portfolio.twig' %}
+        {% include 'partials/post.twig' %}
       {% endfor %}
     </div>
   {% else %}

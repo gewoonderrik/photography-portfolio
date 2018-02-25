@@ -1,0 +1,11 @@
+<div class="meta">
+  <time datetime="{{ post.post_date|date('Y-m-d') }}">{{ post.date }}</time>
+
+  &middot;
+
+  {% if post.terms('category') %}
+    <a href="{{ (post.terms('category')|first).link }}">
+      {{- post.terms('category')|first -}}
+    </a>
+  {% endif %}
+</div>

@@ -1,0 +1,23 @@
+<div class="post">
+  {% if post.get_field('image') %}
+    <a href="{{ post.link }}">
+      <img class="post-image" alt="{{ post.title }}" src="{{ TimberImage(post.get_field('image')).src|resize(400, 300) }}">
+    </a>
+  {% endif %}
+
+  {% include 'partials/meta.twig' %}
+
+  <h2 class="post-title">
+    <a href="{{ post.link }}">
+      {{ post.title }}
+    </a>
+  </h2>
+  
+  <div class="post-content">
+    {{ post.post_content|excerpt(15) }}
+  </div>
+
+  <a class="more-link post-more-link" href="{{ post.link }}">
+    Read more&hellip;
+  </a>
+</div>

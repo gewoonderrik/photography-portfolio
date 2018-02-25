@@ -1,0 +1,39 @@
+.post {
+  $post: (
+    'spacing': 20px,
+    'height': 200px,
+  );
+
+  @include flex-grid-item();
+  background-color: $black;
+  min-height: map-get($post, 'height');
+
+  &-wrap {
+    @include flex-grid-wrapper();
+  }
+
+  .meta {
+    padding: 0 map-get($post, 'spacing');
+  }
+
+  &-title {
+    line-height: 1.25em;
+    margin-bottom: ($text-margin / 4);
+    padding: 0 map-get($post, 'spacing');
+  }
+
+  &-image {
+    margin-bottom: ($text-margin / 2);
+  }
+
+  &-content {
+    font-size: map-get($font-sizes, 'text-small');
+    margin-bottom: ($text-margin / 2);
+    padding: 0 map-get($post, 'spacing');
+  }
+
+  &-more-link {
+    display: block;
+    margin-bottom: (map-get($post, 'spacing') * 1.5);
+  }
+}
