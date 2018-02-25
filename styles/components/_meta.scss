@@ -10,4 +10,9 @@
     color: $grey-light;
     text-decoration: none;
   }
+
+  .single-post & {
+    margin-bottom: ($text-margin * 1.5);
+    text-align: center;
+  }
 }
