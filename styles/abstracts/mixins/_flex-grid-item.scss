@@ -1,0 +1,17 @@
+@mixin flex-grid-item() {
+  @include full-width();
+  margin: 0 0 $flex-grid-spacing;
+
+  @include respond-to('mobile-large') {
+    flex: 0 0 calc(50% - #{$flex-grid-spacing});
+    margin: 0 ($flex-grid-spacing / 2) $flex-grid-spacing;
+  }
+
+  @include respond-to('tablet-portrait') {
+    flex: 0 0 calc(33.333% - #{$flex-grid-spacing});
+  }
+
+  @include respond-to('tablet-landscape') {
+    flex: 0 0 calc(25% - #{$flex-grid-spacing});
+  }
+}
